@@ -10,7 +10,9 @@ $ gem install rubygems_plugin_generator
 
 ## Usage
 
-After the plugin is installed, you can just run `gem plugin <your-plugin-name>`, and it should generate all the code you need to have a working `RubyGems` plugin.
+`gem plugin <your-plugin-name>`
+
+This command should generate all the code you need to have a working `RubyGems` plugin. Just change the file `lib/rubygems/commands/<your-command>_command.rb` and you should be good to go.
 
 ## Contributing
 
