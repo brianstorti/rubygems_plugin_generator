@@ -4,6 +4,13 @@ class Gem::Commands::PluginCommand < Gem::Command
   end
 
   def execute
-    RubygemsPluginGenerator::Generator.start(options[:args])
+    name = options[:args].first
+    klass = name.tr('-', '_').split('_').map(&:capitalize).join
+
+    generator_args = []
+    generator_args << name
+    generator_args << klass
+
+    RubygemsPluginGenerator::Generator.start(generator_args)
   end
 end

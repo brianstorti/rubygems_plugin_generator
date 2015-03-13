@@ -5,28 +5,18 @@ module RubygemsPluginGenerator
     include Thor::Actions
 
     argument :name
-    class_option :test_framework, :default => :test_unit
+    argument :klass
 
     def self.source_root
       File.dirname(__FILE__)
     end
 
-    def create_lib_file
-      template('templates/newgem.tt', "#{name}/lib/#{name}.rb")
+    def create_gemspec_file
+      template('templates/gemspec.tt', "#{name}/#{name}.gemspec")
     end
 
-    def create_test_file
-      test = options[:test_framework] == "rspec" ? :spec : :test
-      create_file "#{name}/#{test}/#{name}_#{test}.rb"
-    end
-
-    def copy_licence
-      if yes?("Use MIT license?")
-        # Make a copy of the MITLICENSE file at the source root
-        copy_file "MITLICENSE", "#{name}/MITLICENSE"
-      else
-        say "Shame on you…", :red
-      end
+    def create_gemfile
+      template('templates/gemfile.tt', "#{name}/Gemfile")
     end
   end
 end
