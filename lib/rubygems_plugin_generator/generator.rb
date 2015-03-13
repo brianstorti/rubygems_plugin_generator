@@ -22,5 +22,13 @@ module RubygemsPluginGenerator
     def create_version_file
       template('templates/version.tt', "#{name}/lib/#{name}/version.rb")
     end
+
+    def create_rubygems_plugin_file
+      template('templates/rubygems_plugin.tt', "#{name}/lib/rubygems_plugin.rb")
+    end
+
+    def create_command_file
+      template('templates/command.tt', "#{name}/lib/rubygems/commands/#{name}_command.rb")
+    end
   end
 end

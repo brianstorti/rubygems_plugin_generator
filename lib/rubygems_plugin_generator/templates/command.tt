@@ -1,0 +1,10 @@
+class Gem::Commands::<%= klass %>Command < Gem::Command
+  def initialize
+    super("<%= name %>", "Add a description here")
+  end
+
+  def execute
+    # here goes the code that will be executed
+    # when someone runs "gem <%= name %>"
+  end
+end
