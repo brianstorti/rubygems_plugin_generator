@@ -18,5 +18,9 @@ module RubygemsPluginGenerator
     def create_gemfile
       template('templates/gemfile.tt', "#{name}/Gemfile")
     end
+
+    def create_version_file
+      template('templates/version.tt', "#{name}/lib/#{name}/version.rb")
+    end
   end
 end
