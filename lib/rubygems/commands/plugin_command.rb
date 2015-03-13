@@ -4,6 +4,6 @@ class Gem::Commands::PluginCommand < Gem::Command
   end
 
   def execute
-    puts "it works"
+    RubygemsPluginGenerator::Generator.start(options[:args])
   end
 end
