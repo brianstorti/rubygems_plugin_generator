@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Generates skeleton for a rubygems plugin}
   spec.description   = %q{Generates skeleton for a rubygems plugin when you run 'gem plugin <plugin-name>'}
-  spec.homepage      = "http://brianstorti.com"
+  spec.homepage      = "https://github.com/brianstorti/rubygems_plugin_generator"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
