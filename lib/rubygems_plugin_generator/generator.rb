@@ -30,5 +30,19 @@ module RubygemsPluginGenerator
     def create_command_file
       template('templates/command.tt', "#{name}/lib/rubygems/commands/#{name}_command.rb")
     end
+
+    def init_git_repo
+      `cd #{name} && git init`
+    end
+
+    def print_final_message
+      say "\n"
+      say "*****************************************************************************************"
+      say "Please edit #{name}.gemspec with your plugin information."
+      say "The file lib/rubygems/commands/#{name}_command.rb was created for you, there you will"
+      say "find a method called 'execute'. That's the method that will be called when someone runs"
+      say "'gem #{name}'"
+      say "*****************************************************************************************"
+    end
   end
 end
