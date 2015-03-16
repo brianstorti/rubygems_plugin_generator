@@ -6,7 +6,7 @@ require 'rubygems/test_case'
 require_relative '../lib/rubygems_plugin_generator/generator'
 require_relative '../lib/rubygems/commands/plugin_command'
 
-class CommandTest < Gem::TestCase
+class PluginCommandTest < Gem::TestCase
   def setup
     super
     @cmd = Gem::Commands::PluginCommand.new
