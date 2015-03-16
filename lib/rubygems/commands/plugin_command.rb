@@ -4,8 +4,14 @@ class Gem::Commands::PluginCommand < Gem::Command
   end
 
   def execute
-    name = options[:args].first
-    name = name.tr('-', '_')
+    args = options[:args]
+
+    if args.nil? or args.empty?
+      raise Gem::CommandLineError,
+            "Please specify a plugin name (e.g. gem plugin foo)"
+    end
+
+    name = args.first.tr('-', '_')
     klass = name.split('_').map(&:capitalize).join
 
     generator_args = []
