@@ -2,11 +2,11 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require '<%= name %>/version'
+require 'foo/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "<%= name %>"
-  spec.version       = <%= klass %>::VERSION
+  spec.name          = "foo"
+  spec.version       = Foo::VERSION
   spec.authors       = ["Your name here"]
   spec.email         = ["Your email here"]
 
