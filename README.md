@@ -71,7 +71,7 @@ $ gem install foo-0.1.0.gem
 # 1 gem installed
 ```
 
-And now you can run you plugin to see it in action:
+And now you can run your plugin to see it in action:
 
 ```bash
 $ gem foo
