@@ -11,7 +11,7 @@ class FooCommandTest < Gem::TestCase
   end
 
   def test_execute
-    @cmd.handle_options %w[here goes you params]
+    @cmd.handle_options %w[here goes your params]
 
     ui = Gem::MockGemUi.new
     use_ui(ui) do
