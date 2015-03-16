@@ -6,5 +6,6 @@ class Gem::Commands::FooCommand < Gem::Command
   def execute
     # here goes the code that will be executed
     # when someone runs "gem foo"
+    say "It works!"
   end
 end
