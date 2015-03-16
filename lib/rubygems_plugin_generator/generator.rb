@@ -44,7 +44,7 @@ module RubygemsPluginGenerator
     end
 
     def init_git_repo
-      `cd #{name} && git init`
+      `cd #{name} && git init && git add .`
     end
 
     def print_final_message
