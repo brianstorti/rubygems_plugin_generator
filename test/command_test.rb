@@ -16,7 +16,7 @@ class CommandTest < Gem::TestCase
     @cmd.handle_options %w[foo-bar_baz]
 
     save_value = ->(opts) { @opts = opts }
-    RubygemsPluginGenerator::Generator.stub(:start, save_value) do |param|
+    RubygemsPluginGenerator::Generator.stub(:start, save_value) do
       @cmd.execute
     end
 
