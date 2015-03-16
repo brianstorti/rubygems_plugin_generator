@@ -37,7 +37,7 @@ $ gem plugin foo
 ```
 
 Here you have the basic structure of a `RubyGems` plugin that just prints a sample message ("It works!").
-It also include a sample test that you can use as an inspiration to write your own. You can run the tests with the `rake`:
+It also include a sample test that you can use as an inspiration to write your own. You can run the tests with `rake`:
 
 ```bash
 $ rake test
