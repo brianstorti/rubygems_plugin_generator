@@ -35,6 +35,10 @@ module RubygemsPluginGenerator
       template('templates/test.tt', "#{name}/test/#{name}_command_test.rb")
     end
 
+    def create_rakefile
+      template('templates/rakefile.tt', "#{name}/Rakefile")
+    end
+
     def create_gitignore_file
       template('templates/gitignore.tt', "#{name}/.gitignore")
     end
