@@ -32,5 +32,9 @@ class GeneratorTest < Minitest::Test
     generated_test = File.read('foo/test/foo_command_test.rb')
     fixture_test = File.read('test/fixtures/test/foo_command_test.rb')
     assert_equal fixture_test, generated_test
+
+    generated_gitignore = File.read('foo/.gitignore')
+    fixture_gitignore = File.read('test/fixtures/gitignore')
+    assert_equal fixture_gitignore, generated_gitignore
   end
 end

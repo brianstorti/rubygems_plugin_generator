@@ -35,6 +35,10 @@ module RubygemsPluginGenerator
       template('templates/test.tt', "#{name}/test/#{name}_command_test.rb")
     end
 
+    def create_gitignore_file
+      template('templates/gitignore.tt', "#{name}/.gitignore")
+    end
+
     def init_git_repo
       `cd #{name} && git init`
     end
