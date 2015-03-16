@@ -33,6 +33,10 @@ class GeneratorTest < Minitest::Test
     fixture_test = File.read('test/sample_plugin/test/foo_command_test.rb')
     assert_equal fixture_test, generated_test
 
+    generated_rakefile = File.read('foo/Rakefile')
+    fixture_rakefile = File.read('test/sample_plugin/Rakefile')
+    assert_equal fixture_rakefile, generated_rakefile
+
     generated_gitignore = File.read('foo/.gitignore')
     fixture_gitignore = File.read('test/sample_plugin/gitignore')
     assert_equal fixture_gitignore, generated_gitignore
