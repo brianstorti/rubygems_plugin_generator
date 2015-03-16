@@ -31,6 +31,10 @@ module RubygemsPluginGenerator
       template('templates/command.tt', "#{name}/lib/rubygems/commands/#{name}_command.rb")
     end
 
+    def create_test_file
+      template('templates/test.tt', "#{name}/test/#{name}_command_test.rb")
+    end
+
     def init_git_repo
       `cd #{name} && git init`
     end

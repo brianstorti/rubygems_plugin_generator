@@ -28,5 +28,9 @@ class GeneratorTest < Minitest::Test
     generated_command = File.read('foo/lib/rubygems/commands/foo_command.rb')
     fixture_command = File.read('test/fixtures/lib/rubygems/commands/foo_command.rb')
     assert_equal fixture_command, generated_command
+
+    generated_test = File.read('foo/test/foo_command_test.rb')
+    fixture_test = File.read('test/fixtures/test/foo_command_test.rb')
+    assert_equal fixture_test, generated_test
   end
 end
